@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #0A0A0A;
+    --bg-elevated: #111111;
+    --bg-card: #161616;
+    --bg-subtle: #1a1a1a;
+    --text-primary: #F5F5F5;
+    --text-secondary: #A0A0A0;
+    --text-muted: #666666;
+    --accent: #00FF41;
+    --accent-dim: rgba(0, 255, 65, 0.12);
+    --border-color: #222222;
+    --border-hover: #333333;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+    --shadow-glow: 0 0 20px rgba(0, 255, 65, 0.15);
+    --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --max-width: 1200px;
+    --container-padding: clamp(1.5rem, 5vw, 3rem);
+    /* ===== NEW: Tech Stack Globe variables ===== */
+    /* Backgrounds */
+    --color-surface: #1a1a1a;      /* matches your --bg-subtle */
+    --color-surface-2: #242424;    /* slightly lighter for panels */
+
+    /* Borders */
+    --color-border: #2a2a2a;       /* matches your --border-hover */
+
+    /* Text */
+    --color-text: #f0f0f0;         /* matches your --text-primary */
+    --color-text-muted: #888888;   /* matches your --text-secondary */
+
+    /* Accents – category colours (already defined above, but keeping these for the globe) */
+    --color-accent: #a78bfa;       /* AI/ML – violet */
+    --color-accent-blue: #34d399;  /* Backend – emerald */
+    --color-green: #38bdf8;        /* Cloud – sky blue */
+    --color-amber: #fb923c;        /* Databases – orange */
+    /* Frontend uses --color-accent with pink override in the component */
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  * {
+    border-color: var(--border-color);
+  }
+}
+
+@keyframes hop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(0.6em) scale(0.85);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-0.12em) scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-hop-in {
+  animation-name: hop-in;
+  animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); /* slight overshoot = "hop" */
+  animation-iteration-count: 1;
+}
+
+@layer components {
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+  }
+
+  .container-main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+  }
+}
