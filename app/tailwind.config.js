@@ -2,6 +2,9 @@
 module.exports = {
   darkMode: ["class"],
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  safelist: [
+    'animate-blink',
+  ],
   theme: {
     extend: {
       colors: {

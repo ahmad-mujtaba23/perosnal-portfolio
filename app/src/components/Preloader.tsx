@@ -80,15 +80,6 @@ export function Preloader({ onComplete }: PreloaderProps) {
             </span>
           ))}
         </span>
-        <span
-          className="inline-block w-[2px] h-[1.2em] bg-[#F5F5F5] ml-1 animate-blink"
-          aria-hidden="true"
-          style={
-            reducedMotion
-              ? undefined
-              : { animationDelay: `${totalRevealMs}ms` }
-          }
-        />
       </div>
     </div>
   );
