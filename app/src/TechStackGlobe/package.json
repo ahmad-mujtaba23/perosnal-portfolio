@@ -1,0 +1,16 @@
+{
+  "name": "tech-stack-globe",
+  "version": "1.0.0",
+  "description": "Interactive 3D globe for showcasing your tech stack. Click any icon to spin the globe and reveal a detail panel.",
+  "main": "src/index.ts",
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "framer-motion": ">=10"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/react": "^18",
+    "@types/react-dom": "^18"
+  }
+}
