@@ -8,11 +8,11 @@ import { Services } from "@/sections/Services";
 import { Experience } from "@/sections/Experience";
 import { Projects } from "@/sections/Projects";
 import { Skills } from "@/sections/Skills";
+import { Testimonials } from "@/sections/Testimonials";
 import { Contact } from "@/sections/Contact";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
@@ -52,6 +52,7 @@ export default function App() {
         <Experience />
         <Projects />
         <Skills />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />
