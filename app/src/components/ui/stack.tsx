@@ -151,7 +151,7 @@ export function Stack({
     >
       {stack.map((card, index) => {
         const isTop = index === stack.length - 1;
-        const indexFromBottom = index;
+        //const indexFromBottom = index;
         const randomRot = randomRotation ? (Math.random() * 10 - 5) : 0;
         const rotateZ = (stack.length - 1 - index) * 4 + randomRot;
         const scale = 1 - (stack.length - 1 - index) * 0.04;
